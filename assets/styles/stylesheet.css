@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+  
+:root{
+  --body-bg: #161b37;
+  --primary-color:#a9c6f8;
+  --default-width: 400px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(22, 27, 55);
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: var(--default-width);
+  max-width: 100vw;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header .image{
+  padding: .5rem;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .image img{
+  object-fit: cover; /* conter a imagem com o tamanho da tag img */
+  object-position: center; /* conter tendenciando ao centro */
+  border-radius: 50%;
+}
+
+header .informations{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  gap: .25rem; /* espaçamento ENTRE os elementos, diferente do margin */
+}
+
+header .informations .informations--title{
+  font-weight: 600; /* funciona como o strong, dá destaque ao texto */
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+header .informations .informations--subtitle{
+  font-weight: 300;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1rem;
+  /* transition: all ease-in-out .5s; */
+}
+
+/* header .informations .informations--subtitle:hover{ font-size: 20px; } */
+
+.links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5rem;
+  padding: 0 .5rem;
+  margin-bottom: 1rem;
+}
+
+.links a{
+  width: 100%;
+  border: 2px solid var(--primary-color);
+  padding: .5rem 0;  /* sentido horário: cima, direita, baixo e esquerda, ou simplesmente y (altura) ou x (largura) */
+  text-align: center;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social_media{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.social_media a{
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 400;
+}
