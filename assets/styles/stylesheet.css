@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap');
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap'); /* Importando uma fonte */
+
+/* Aplicações para todo o body */
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; /* Aplica uma fonte principal, para caso o navegador n rode, há uma substituta */
+  }
   
-:root{
+:root{ 
+  /* O :root seletor corresponde aos elementos raiz do documento, ou seja, como variáveis, serão elementos muito utlizados */
   --body-bg: #161b37;
   --primary-color:#a9c6f8;
   --default-width: 400px;
@@ -43,6 +50,7 @@ header .image{
 }
 
 header .image img{
+  /* Aplicando diretamente na tag img, que está dentro de uma div no header */
   object-fit: cover; /* conter a imagem com o tamanho da tag img */
   object-position: center; /* conter tendenciando ao centro */
   border-radius: 50%;
@@ -55,7 +63,7 @@ header .informations{
   flex-direction: column;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  gap: .25rem; /* espaçamento ENTRE os elementos, diferente do margin */
+  gap: .25rem; /* espaçamento ENTRE os elementos, diferente do margin que dá um espaçamento ao redor */
 }
 
 header .informations .informations--title{
@@ -69,23 +77,21 @@ header .informations .informations--subtitle{
   color: var(--primary-color);
   text-decoration: none;
   font-size: 1rem;
-  /* transition: all ease-in-out .5s; */
 }
-
-/* header .informations .informations--subtitle:hover{ font-size: 20px; } */
 
 .links{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   gap: 1.5rem;
   padding: 0 .5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* define a área de margem na parte inferior de um elemento */
 }
 
 .links a{
+  /* Aplicando diretamente na tag a, que está dentro de uma div */
   width: 100%;
   border: 2px solid var(--primary-color);
   padding: .5rem 0;  /* sentido horário: cima, direita, baixo e esquerda, ou simplesmente y (altura) ou x (largura) */
@@ -94,6 +100,12 @@ header .informations .informations--subtitle{
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
+  transition: all ease-in-out .5s; /* efeito de transição para o hover, que possibilita um elemento ter seu tamanho alterado através da ação do usuário, quando o próprio passar o cursor do mouse sobre os links */
+}
+
+.links a:hover{ 
+  font-size: 18px;
+  width: 110%;
 }
 
 .social_media{
